@@ -35,7 +35,11 @@ def create_dictionary(clean_word_list):
         else:
             word_count[word] = 1
         word_count_sorted = sorted(word_count.items(), key=operator.itemgetter(1), reverse=True)
+    count = 0
     for key, value in word_count_sorted:
-        print(value, key)
-
+        if count < 20:
+            count += 1
+            print(value, key)
+        else:
+            break
 contaParole('sample.txt')
