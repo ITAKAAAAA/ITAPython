@@ -35,7 +35,7 @@ def create_dictionary(clean_word_list):
         else:
             word_count[word] = 1
         word_count_sorted = sorted(word_count.items(), key=operator.itemgetter(1), reverse=True)
-    for x in range(20):
-        print(word_count.get())
+    for key, value in word_count_sorted:
+        print(value, key)
 
 contaParole('sample.txt')
